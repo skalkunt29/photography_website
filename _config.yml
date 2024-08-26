@@ -2,7 +2,7 @@
 title: Srianga's Photography
 email: ""
 description: "A place to find picture taken by Sriranga"
-url: "https://photography.sriranga.me"
+url: "https://skalkunt29.github.io/"
 share: true
 
 # Owner/author information
@@ -25,8 +25,8 @@ comments :
 
 # Internal nav
 nav:
-  - GALLERY: "/gallery/"  
-  - ABOUT: "/about/"
+  - GALLERY: "https://skalkunt29.github.io/photography_website/gallery/"  
+  - ABOUT: "https://skalkunt29.github.io/photography_website/about/"
 
 # All translation keys
 translations:
