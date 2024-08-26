@@ -1,8 +1,8 @@
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
-  color: #eee;
-  background-color: #000;
+  background-color: #fff;
+  color: #000;
 }
 p {
   line-height: 1.5;
@@ -21,9 +21,9 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #760824;
+  color: #007bff;
   transition: color .4s;
-  text-decorarion: none;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
@@ -48,7 +48,7 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
-  background-color: transparent;
+  background-color: #f8f9fa;
   position: absolute;
   top: 0;
   left: 0;
@@ -57,9 +57,10 @@ hr.small {
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  color: #333; /* Darker color for better visibility */
 }
 .navbar-custom .nav li a {
-  color: white;
+  color: #333; /* Darker color for better visibility */
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
@@ -67,23 +68,29 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
-    background: transparent;
-    border-bottom: 1px solid transparent;
+    background: #f8f9fa; /* Light background instead of transparent */
+    border-bottom: 1px solid #e7e7e7;
   }
   .navbar-custom .navbar-brand {
-    color: white;
+    color: #333;
     padding: 20px;
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: #0085a1;
+    color: #000; /* Change to black */
   }
   .navbar-custom .nav li a {
-    color: white;
+    color: #333;
     padding: 20px;
   }
-  .navbar-custom .nav li a:hover{
-    color: #0085a1;
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: #000; /* Change to black */
+  }
+  .navbar-custom .nav li.active a {
+    color: #000; /* Change to black */
+    font-weight: bold;
+    background-color: transparent;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -113,11 +120,11 @@ hr.small {
     color: #ffffff;
   }
   .navbar-custom.is-fixed .navbar-brand:hover {
-    color: #0085a1;
+    color: #000; /* Change to black */
   }
   
   .navbar-custom.is-fixed .nav li a:hover {
-    color: #0085a1;
+    color: #000; /* Change to black */
   }
 .navbar-custom.is-fixed .nav li a:active{
     color: #6ec54d;
@@ -406,3 +413,37 @@ body {
  color: black;
 }
 
+/* Light Theme */
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light-theme a {
+  color: #007bff;
+}
+
+body.light-theme .navbar-custom {
+  background-color: #f8f9fa;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #000;
+  color: #eee;
+}
+
+body.dark-theme a {
+  color: #760824;
+}
+
+body.dark-theme .navbar-custom {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000; /* Change to black */
+  background-color: transparent;
+}
